@@ -4,3 +4,4 @@ Professor: Ivo
 3 - Aluno: Clariane
 4 - Aluno: Luciano
 5 - Aluno: Djair
+6- Aluno: Fernando Oliveira
