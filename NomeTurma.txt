@@ -5,3 +5,4 @@ Professor: Ivo
 4 - Aluno: Luciano
 5 - Aluno: Djair
 6- Aluno: Fernando Oliveira
+7 - Aluno: Lucas
