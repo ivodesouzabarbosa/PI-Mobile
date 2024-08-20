@@ -149,17 +149,26 @@ body {
     color: #333;
 }
 
-.coluns {
+.container {
+    width: 80%;
+    padding: 20px;
+    background-color: cornflowerblue;
     display: flex;
-    /* flex-direction: row; */
-    gap: 20px;
-    flex-wrap: wrap;
     justify-content: center;
-}
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
 
 .card {
-    flex: 1 1 300px;
+    cursor: pointer;
     max-width: 300px;
     background-color: var(--fourth-color);
     border-radius: 8px; 
