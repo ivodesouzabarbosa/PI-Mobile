@@ -1,0 +1,309 @@
+:root {
+    --primary-color: #21a3a3;
+    --second-color: #13c8b5;
+    --threeth-color: #6cf3d5;
+    --fourth-color: #7375a5;
+    --fifth-color: #2b364a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font: 400 62.5% 'Inter', sans-serif;
+}
+
+
+
+/* MANU */
+nav {
+    display: flex;
+    /*Jogar os itens para o canto da página*/
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    /* margin-left: auto;*/
+    width: 100%;
+}
+
+.logo {
+    /*Mudando a cor da fonte do nome*/
+    color: white;
+    /*Deixando o texto formatado*/
+    text-transform: uppercase;
+    /*Mudando o espaçamento das letras*/
+    letter-spacing: 5px;
+    /*Tamaho da letra*/
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.nav-links {
+    /*Ajustando o tamanho e posição dos itens*/
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+}
+
+.nav-links li {
+    /*Sumindo com os pontos que ficavam nos itens*/
+    list-style: none;
+    margin: 0 10px;
+
+
+}
+
+.nav-links a {
+    /*Mudando a cor dos itens*/
+    color: white;
+    /*Mudando o espaçamento das letras dos itens*/
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    /*Não deixando o menu hambuguer visivel */
+    display: none;
+    /*aparecendo a maozinha quando clica no menu hambuguer*/
+    cursor: pointer;
+}
+
+.burger div {
+    /*Ajeitando o menu Hambuguer*/
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+
+/*Quando se clica no menu , consegue abrir os itens*/
+.nav-active {
+    transform: translateX(0%);
+}
+
+
+
+/*Transformando o menu em X*/
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+
+header {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 1px solid black; */
+    align-items: baseline;
+
+}
+
+.cabecalho-mb {
+    display: none;
+}
+
+header .menu {
+    display: flex;
+    list-style: none;
+
+}
+
+
+
+
+/* CODIGO DO BODY */
+body {
+    background-color: var(--fifth-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    /* height: 40vh; */
+}
+
+
+.title {
+    margin: 20px 0;
+    color: #333;
+}
+
+.coluns {
+    display: flex;
+    /* flex-direction: row; */
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    background-color: var(--fourth-color);
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background-color: #2b364a71;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-content {
+    max-height: 0;
+    opacity: 0;
+    color: #fff;
+    text-transform: lowercase;
+    text-align: center;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.card.expanded .card-content {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 15px;
+}
+
+.card-content p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+/* ME MENU */
+/*Ajustando a altura*/
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+/*Ajustando a altura minima*/
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /*ajustando os itens para se adequar a altura min.*/
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        /*Arrumando o menu*/
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        /*Ajeitando a transição parar abrir o menu*/
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 5;
+        color: var(--fifth-color);
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin: 20px 0;
+        justify-content: space-between;
+    }
+
+    .burger {
+        /*para aparecer o menu quando a tela tiver pequena*/
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links.nav-active li {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: none;
+    }
+
+    .cabecalho-dk {
+        display: none;
+    }
+
+    .cabecalho-mb {
+        display: flex;
+        justify-content: space-between;
+        color: black;
+        width: 90%;
+    }
+}
+
+
+/* ANIMAÇÔES DO MENU */
+/*Animações quando se clica no menu*/
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

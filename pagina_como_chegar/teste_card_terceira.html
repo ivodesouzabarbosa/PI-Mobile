@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Card 3</title>
+    <style>
+        /* Esconde todos os parágrafos inicialmente */
+        .card-content p {
+            display: none;
+        }
+
+        /* Exibe apenas o parágrafo ativo */
+        .card-content p.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+
+        <article class="card">
+            <nav class="card-nav">
+                <li><a href="#btn1" data-target="btn1">btn 1</a></li>
+                <li><a href="#btn2" data-target="btn2">btn 2</a></li>
+                <li><a href="#btn3" data-target="btn3">btn 3</a></li>
+            </nav>
+
+            <div class="card-content">
+                <p id="btn1" class="active">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe debitis corporis modi dolorem eum? Cupiditate eius, molestias amet, dolore exercitationem, officiis doloremque deserunt magni aperiam ipsum quos vel autem. Illo!
+                </p>
+                <p id="btn2">
+                    2Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe debitis corporis modi dolorem eum? Cupiditate eius, molestias amet, dolore exercitationem, officiis doloremque deserunt magni aperiam ipsum quos vel autem. Illo!
+                </p>
+                <p id="btn3">
+                    3Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe debitis corporis modi dolorem eum? Cupiditate eius, molestias amet, dolore exercitationem, officiis doloremque deserunt magni aperiam ipsum quos vel autem. Illo!
+                </p>
+            </div>
+        </article>
+    </section>    
+
+    <script>
+        // Seleciona todos os links de navegação
+        const navLinks = document.querySelectorAll('.card-nav a');
+
+        // Adiciona um evento de clique a cada link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Evita o comportamento padrão do link
+
+                // Remove a classe 'active' de todos os parágrafos
+                document.querySelectorAll('.card-content p').forEach(p => {
+                    p.classList.remove('active');
+                });
+
+                // Adiciona a classe 'active' ao parágrafo correspondente
+                const target = document.getElementById(this.getAttribute('data-target'));
+                if (target) {
+                    target.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
