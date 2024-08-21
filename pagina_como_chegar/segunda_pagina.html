@@ -6,33 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes</title>
-    <link rel="stylesheet" href="css/tela_2.css">
-    <!-- <link rel="stylesheet" href="./css/opção2.css"> -->
+    <link rel="stylesheet" href="./assets/css/tela_2.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <h4>Logo</h4>
-            </div>
-
-            <ul class="nav-links">
-                <li><img class="icon-menu" src="" alt=""> <a href="#">O que fazer</a></li>
-                <li><img class="icon-menu" src="" alt=""> <a href="#">Eventos</a></li>
-                <li><img class="icon-menu" src="img/icon_map.png" alt=""> <a href="#">Como chegar</a></li>
-                <li><img class="icon-menu" src="" alt=""> <a href="#">Sobre Belém</a></li>
-                <li><img class="icon-menu" src="" alt=""> <a href="#">Fale Conosco</a></li>
-                <li><img class="icon-menu" src="" alt=""> <a href="#">Configurações</a></li>
-            </ul>
-            <!--Menu hambuguer-->
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+        <nav class="nav-menu">
+          <div>
+            <img src="./assets/icons-menu/senac_logo_branco.png" alt="logo_senac">
+          </div>
+          <div class="logo">
+            <h4>Logo</h4>
+          </div>
+    
+          <ul class="nav-links">
+            <li class="icones"><img class="icon-menu" src="./assets/icons-menu/o_que_fazer.png" alt=""> <a href="#">O que fazer</a></li>
+            <li class="icones"><img class="icon-menu" src="./assets/icons-menu/eventos.png" alt=""> <a href="#">Eventos</a></li>
+            <li class="icones"><img class="icon-menu" src="./assets/icons-menu/como_chegar.png" alt=""><a href="#">Como chegar</a></li>
+            <li class="icones"><img class="icon-menu" src="./assets/icons-menu/sobre_belem.png" alt=""> <a href="#">Sobre Belém</a></li>
+            <li class="icones"><img class="icon-menu" src="./assets/icons-menu/fale_concosco.png" alt=""> <a href="#">Fale Conosco</a></li>
+            <li class="icones"><img class="icon-menu" src="./assets/icons-menu/configuracoes.png" alt=""> <a href="#">Configurações</a></li>
+            <li class="icones idioma">
+              <img class="bandeira" onclick="" src="./assets/icons-menu/usa3.ico" alt="">
+              <img class="bandeira" onclick="" src="./assets/icons-menu/brazil2.ico" alt="">
+              <img class="bandeira" onclick="" src="./assets/icons-menu/spain4.ico" alt="">
+              <img class="bandeira" onclick="" src="./assets/icons-menu/france1.ico" alt="">
+            </li>
+            
+            <li class="icones rede-social">
+              <img class="redes facebook" src="./assets/icons-menu/facebook.png" alt="facebook">
+              <img class="redes flirckr" src="./assets/icons-menu/flickr.png" alt="flickr">
+              <img class="redes instagram" src="./assets/icons-menu/instagram.png" alt="instagram">
+            </li>
+          </ul>
+          <!--Menu hambuguer-->
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
         </nav>
-    </header>
+      </header>
+
 
     <main>
         <div class="var-details">
@@ -41,120 +57,94 @@
     </main>
 
     <section class="container">
-        <div class="coluns">
-            <div class="column">
-                <article class="card">
-                    <div class="image-container">
-                        <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
-                        <div class="card-title">Bosque Rodrigues Alves</div>
+        <div class="column">
+            <article class="card">
+                <div class="image-container">
+                    <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                    <div class="card-title">Bosque Rodrigues Alves</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-nav">
+                        <nav class="nav-content">
+                            <li><a href="#" data-target="btn1"><img src="assets/icons-body/calendar-and-chart_icon-icons.com_56837.png">btn 1</a></li>
+                            <li><a href="#" data-target="btn2">btn 2</a></li>
+                            <li><a href="#" data-target="btn3">btn 3</a></li>
+                        </nav>
+                        <img class="icon-closed" src="./assets/icons-body/icon-closed.png" alt="icone fechar">
                     </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur
-                            maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas
-                            asperiores
-                            magni assumenda exercitationem unde. Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                            Corrupti reiciendis nisi illo, similique repellat natus vero ratione unde optio quos quis
-                            praesentium aliquam velit sed aperiam earum architecto obcaecati. Rem?</p>
+                    <p data-content="btn1" class="active">
+                        btn1 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn2">
+                        btn2 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn3">
+                        btn3 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <article class="card">
+                <div class="image-container">
+                    <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                    <div class="card-title">Bosque Rodrigues Alves</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-nav">
+                        <nav class="nav-content">
+                            <ul>
+                                <li><a href="#" data-target="btn1"><img src="path/to/image1.jpg" alt="Botão 1"></a></li>
+                                <li><a href="#" data-target="btn2"><img src="path/to/image2.jpg" alt="Botão 2"></a></li>
+                                <li><a href="#" data-target="btn3"><img src="path/to/image3.jpg" alt="Botão 3"></a></li>
+                            </ul>
+                        </nav>
+                        <img class="icon-closed" src="assets/icons-body/icon-closed.png" alt="icone fechar">
                     </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="card">
-                    <div class="image-container">
-                        <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
-                        <div class="card-title">Bosque Rodrigues Alves</div>
+                    <p data-content="btn1" class="active">
+                        btn1 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn2">
+                        btn2 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn3">
+                        btn3 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <article class="card">
+                <div class="image-container">
+                    <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                    <div class="card-title">Bosque Rodrigues Alves</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-nav">
+                        <nav class="nav-content">
+                            <li><a href="#" data-target="btn1">btn 1</a></li>
+                            <li><a href="#" data-target="btn2">btn 2</a></li>
+                            <li><a href="#" data-target="btn3">btn 3</a></li>
+                        </nav>
+                        <img class="icon-closed" src="assets/icons/icon-closed.png" alt="icone fechar">
                     </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur
-                            maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas
-                            asperiores
-                            magni assumenda exercitationem unde. Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                            Corrupti reiciendis nisi illo, similique repellat natus vero ratione unde optio quos quis
-                            praesentium aliquam velit sed aperiam earum architecto obcaecati. Rem?</p>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="card">
-                    <div class="image-container">
-                        <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
-                        <div class="card-title">Bosque Rodrigues Alves</div>
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur
-                            maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas
-                            asperiores
-                            magni assumenda exercitationem unde. Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                            Corrupti reiciendis nisi illo, similique repellat natus vero ratione unde optio quos quis
-                            praesentium aliquam velit sed aperiam earum architecto obcaecati. Rem?</p>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="card">
-                    <div class="image-container">
-                        <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
-                        <div class="card-title">Bosque Rodrigues Alves</div>
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur
-                            maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas
-                            asperiores
-                            magni assumenda exercitationem unde. Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                            Corrupti reiciendis nisi illo, similique repellat natus vero ratione unde optio quos quis
-                            praesentium aliquam velit sed aperiam earum architecto obcaecati. Rem?</p>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="card">
-                    <div class="image-container">
-                        <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
-                        <div class="card-title">Bosque Rodrigues Alves</div>
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur
-                            maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas
-                            asperiores
-                            magni assumenda exercitationem unde. Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                            Corrupti reiciendis nisi illo, similique repellat natus vero ratione unde optio quos quis
-                            praesentium aliquam velit sed aperiam earum architecto obcaecati. Rem?</p>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="card">
-                    <div class="image-container">
-                        <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
-                        <div class="card-title">Bosque Rodrigues Alves</div>
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur
-                            maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas
-                            asperiores
-                            magni assumenda exercitationem unde. Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                            Corrupti reiciendis nisi illo, similique repellat natus vero ratione unde optio quos quis
-                            praesentium aliquam velit sed aperiam earum architecto obcaecati. Rem?</p>
-                    </div>
-                </article>
-            </div>
+                    <p data-content="btn1" class="active">
+                        btn1 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn2">
+                        btn2 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn3">
+                        btn3 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                </div>
+            </article>
         </div>
     </section>
 
-    <script src="./js/sanfona.js"></script>
+    <script src="./assets/js/sanfona.js"></script>
     <!-- <script src="./js/revealed_content.js"></script> -->
-    <script src="./js/hamburguer.js"></script>
+    <script src="./assets/js/hamburguer.js"></script>
 </body>
 
 </html>
