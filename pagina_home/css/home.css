@@ -576,6 +576,17 @@ main .botoes {
       display: block;
     }
 
+    .btn-dk {
+      color: white;
+      background-color: var(--second-color);
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      width: 30%;
+    }
+
     footer {
       background-color: var(--primary-color);
     }
